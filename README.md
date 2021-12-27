@@ -1,19 +1,30 @@
 # Prueba de desarrollo Distribuciones AXA
 
-Este es el repositorio de la entrega de la prueba de desarrollo de Jose Luis Bustos, para la vacante de desarrollador PHP
+Este es el repositorio de la entrega para la prueba de desarrollo de Jose Luis Bustos, para la vacante de desarrollador PHP
 
-## Official Documentation
+## Instrucciones
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+al finalizar la clonacion es necesario ejecutar el siguiente comando:
 
-## Contributing
+composer install
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Para configurar la base de datos en la raiz del directorio se debe buscar el archivo .env
 
-## Security Vulnerabilities
+en
+DB_HOST va la direccion del servidor de base de datos
+DB_PORT el puerto
+DB_DATABASE el nombre de la DB
+DB_USERNAME el nombre del usuario
+DB_PASSWORD el password
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Para generar data de prueba se debe ejecutar el comando php artisan migrate:refresh --seed, este comando creara las tablas en la DB y generara 100 clientes de prueba y 2000 registros en la tabla de pagos
+## Respuestas del Cuestionario
 
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. El método isset se utiliza para:
+R: Chequea si una variable esta definida
+2. Enuncie los tipos de array en PHP
+R: indexado, Asociativo, Multidimencional
+3. La función require genera un warning y continúa ejecutando el script
+R: Verdadero
+4. Enuncie la diferencia entre usar el método POST vs el método GET
+R: Post usa los encabezado HTTP para tranferir informacion, mientras que GET envia la informacion agregandola a la solicitud de la pagina en la url
