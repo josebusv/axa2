@@ -12,7 +12,7 @@
         <div class="jumbotron">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <img src="./logo_axa.png" class="img" alt="log">
+                    <img src="./logo_axa.png" class="img-fluid" alt="log">
                 </div>
                 <div class="col-md-9 col-sm-6 justify-content-center  d-flex align-items-center">
                     <h1>Consulta de Pagos</h1>
