@@ -4,11 +4,11 @@ Este es el repositorio de la entrega para la prueba de desarrollo de Jose Luis B
 
 ## Instrucciones
 
-al finalizar la clonacion es necesario ejecutar el siguiente comando:
+al finalizar la clonacion, es necesario ejecutar el siguiente comando:
 
 composer install
 
-Para configurar la base de datos en la raiz del directorio se debe buscar el archivo .env
+Para configurar la base de datos, en la raiz del directorio se debe buscar el archivo .env
 
 en
 DB_HOST va la direccion del servidor de base de datos
