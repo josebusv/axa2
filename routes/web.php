@@ -14,4 +14,4 @@
 */
 
 $router->get('/', 'ClientesController@index');
-$router->get('/{tipo_doc}/{num_identificacion}', 'ClientesController@pagos');
+$router->get('/{tipo_doc}/{num_identificacion}', ['as' => 'consulta', 'uses' => 'ClientesController@pagos']);

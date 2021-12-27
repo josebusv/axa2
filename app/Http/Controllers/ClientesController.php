@@ -15,17 +15,23 @@ class ClientesController extends Controller
     {
         $cliente = Cliente::where('tipo_documento', '=', $tipo_doc)->where('num_documento', '=', $num_identificacion)->get();
 
-        $id = $cliente[0]['id'];
-        $nombre = $cliente[0]['nombre_cliente'];
-        $pagos = Pago::where('vigencia', '=', 1)->where('cliente_id','=', $id)->get();
+        if($cliente){
+            $id = $cliente[0]['id'];
+            $nombre = $cliente[0]['nombre_cliente'];
+            $pagos = Pago::where('vigencia', '=', 1)->where('cliente_id','=', $id)->get();
 
-        $data=[];
+            $data=[];
 
-        foreach($pagos as $pago)
-        {
-            $data[]=['num_plan' =>  $pago['num_plan'], 'valor'  =>  $pago['valor'], 'vencimiento'   => $pago['vencimiento'], 'vigencia' => $pago['vigencia']];
-        };
-        $array = ['nombre' => $nombre, 'data' => $data];
+            foreach($pagos as $pago)
+            {
+                $data[]=['num_plan' =>  $pago['num_plan'], 'valor'  =>  $pago['valor'], 'vencimiento'   => $pago['vencimiento'], 'vigencia' => $pago['vigencia']];
+            }
+            $array = ['nombre' => $nombre, 'data' => $data];
+        }else{
+            $array = ["mensaje"   => "No existen pagos con esta informacion"];
+        }
+
+
         //dd($array);
         return json_encode($array);
 
